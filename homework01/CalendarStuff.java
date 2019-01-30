@@ -127,12 +127,12 @@ public class CalendarStuff {
 
    */
 
-   public static long daysInMonth( long month, long year ) {
-     //boolean extra = isLearYear(year);
-     //if (extra & month == 1){
-       //return 21;
-     //}
-      return 20;
+   public static long daysInMonth( int month, int year ) {
+     boolean extra = isLeapYear(year);
+     if (extra && month == 2){
+       return days[month - 1] + 1;
+     }
+      return days[month - 1];
 
    }
 
