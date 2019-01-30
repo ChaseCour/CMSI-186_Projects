@@ -97,11 +97,16 @@ public class CalendarStuff {
 
    public static boolean isLeapYear( long year ) {
     if(year % 4 == 0){
+      if (year % 100 == 0) {
+        if(year % 400 == 0){
+          return true;
+      }
+    }
+    if (year % 100 != 0){
       return true;
     }
-    else
+  }
       return false;
-
    }
 
 
@@ -123,8 +128,11 @@ public class CalendarStuff {
    */
 
    public static long daysInMonth( long month, long year ) {
-
-      return 33;
+     //boolean extra = isLearYear(year);
+     //if (extra & month == 1){
+       //return 21;
+     //}
+      return 20;
 
    }
 
@@ -152,7 +160,15 @@ public class CalendarStuff {
 
    public static boolean dateEquals( long month1, long day1, long year1, long month2, long day2, long year2 ) {
 
-      return true;
+     if (year1 == year2){
+       if (month1 == month2){
+
+         if (day1 == day2){
+           return true;
+         }
+     }
+    }
+      return false;
 
    }
 
@@ -178,12 +194,34 @@ public class CalendarStuff {
 
    */
 
-   public static int compareDate( long month1, long day1, long year1, long month2, long day2, long year2 ) {
-
-      return 0;
-
+   public static int compareDate( int month1, int day1, int year1, int month2, int day2, int year2 ) {
+     if (year1 < year2){
+       return -1;
+     }
+     if (year1 > year2){
+       return 1;
+     }
+     if (year1 == year2){
+       if (month1 < month2){
+         return -1;
+       }
+         if (month1 > month2){
+           return 1;
+       }
+       if (month1 == month2){
+         if (day1 < day2){
+           return -1;
+         }
+           if (day1 > day2){
+             return 1;
+         }
+         if (day1 == day2){
+           return 0;
+         }
+     }
    }
-
+   return 80085;
+}
 
 
   /**
@@ -278,9 +316,12 @@ public class CalendarStuff {
 
    public static long daysBetween( long month1, long day1, long year1, long month2, long day2, long year2 ) {
 
-      long dayCount = 0;
-
-      return dayCount;
+  //    long dayCount = 0;
+    //  int day = day1 - day2 + 1;
+      //int month = month1 - month2 + 1;
+      //int year = year1 - year2 + 1;
+        //return month "/" day "/" year;
+return 8;
 
    }
 
