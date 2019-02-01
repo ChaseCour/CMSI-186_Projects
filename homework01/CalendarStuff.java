@@ -242,9 +242,22 @@ public class CalendarStuff {
 
    */
 
-   public static boolean isValidDate( long month, long day, long year ) {
-
-      return true;
+   public static boolean isValidDate( int month, long day, long year ) {
+     if (isLeapYear(year)){
+       if(month == 2){
+         if(day == 29){
+           return true;
+         }
+       }
+     }
+     if (month < 13 && month > 0){
+       if (days[month] >= day && day >= 1){
+         if (year > 0) {
+           return true;
+         }
+       }
+     }
+      return false;
 
    }
 
@@ -261,13 +274,36 @@ public class CalendarStuff {
    */
 
    public static String toMonthString( int month ) {
+     if(month == 1)
+     return "January";
+     if(month == 2)
+     return "February";
+     if(month == 3)
+     return "March";
+     if(month == 4)
+     return "April";
+     if(month == 5)
+     return "May";
+     if(month == 6)
+     return "June";
+     if(month == 7)
+     return "July";
+     if(month == 8)
+     return "August";
+     if(month == 9)
+     return "September";
+     if(month == 10)
+     return "October";
+     if(month == 11)
+     return "November";
+     if(month == 12)
+     return "December";
+     if(month == 0)
+     return "Zeroary";
+     if(month == 13)
+     return "Thirtember";
 
-      switch( month - 1 ) {
-
-         default: throw new IllegalArgumentException( "Illegal month value given to 'toMonthString()'." );
-
-      }
-
+     return "Invalid Month";
    }
 
 
@@ -283,13 +319,27 @@ public class CalendarStuff {
    */
 
    public static String toDayOfWeekString( int day ) {
+// How to do the zero and octoday problem
+     if(day == 1)
+     return "Sunday";
+     if(day == 2)
+     return "Monday";
+     if(day == 3)
+     return "Tuesday";
+     if(day == 4)
+     return "Wednesday";
+     if(day == 5)
+     return "Thursday";
+     if(day == 6)
+     return "Friday";
+     if(day == 7)
+     return "Saturday";
+     if(day == 0)
+     return "Zeroday";
+     if(day == 8)
+     return "Octoday";
 
-      switch( day - 1 ) {
-
-         default       : throw new IllegalArgumentException( "Illegal day value given to 'toDayOfWeekString()'." );
-
-      }
-
+     return "Invalid Day";
    }
 
 
@@ -316,12 +366,7 @@ public class CalendarStuff {
 
    public static long daysBetween( long month1, long day1, long year1, long month2, long day2, long year2 ) {
 
-  //    long dayCount = 0;
-    //  int day = day1 - day2 + 1;
-      //int month = month1 - month2 + 1;
-      //int year = year1 - year2 + 1;
-        //return month "/" day "/" year;
-return 8;
+     return 8;
 
    }
 
