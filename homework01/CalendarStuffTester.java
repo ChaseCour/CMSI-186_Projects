@@ -13,11 +13,77 @@ public class CalendarStuffTester {
       test_daysBetween();        // 12 tests
       test_toDayOfWeekString();  //  9 tests
       test_toMonthString();      // 14 tests
+      numarical_daysBetween();
    }
   /**
    * method to test the "isLeapYear()" method in the CalendarStuff class
    * @return void
    */
+
+   static void numarical_daysBetween(){
+
+     System.out.println("FOURTEEN TESTS FOR daysBetween");
+     System.out.println();
+
+     System.out.print( "   Counting 0000 days between 03-15-2005 and 03-15-2005 : " );
+     System.out.println(CalendarStuff.daysBetween(  3, 15, 2005,  3, 15, 2005 ));
+
+//    1
+     System.out.print( "   Counting 0001 day  between 03-15-2005 and 03-16-2005 : " );
+     System.out.println(CalendarStuff.daysBetween(  3, 15, 2005,  3, 16, 2005 ));
+
+
+// 1
+     System.out.print( "   Counting 0001 day  between 03-31-2005 and 04-01-2005 : " );
+      System.out.println(  CalendarStuff.daysBetween(  3, 31, 2005,  4,  1, 2005 ));
+
+
+// 3
+     System.out.print( "   Counting 0003 days between 12-30-2005 and 01-02-2006 : " );
+     System.out.println(  CalendarStuff.daysBetween( 12, 30, 2005,  1,  2, 2006 ));
+
+
+// 365
+     System.out.print( "   Counting 0365 days between 08-15-2005 and 08-15-2006 : " );
+     System.out.println( CalendarStuff.daysBetween(  8, 15, 2005,  8, 15, 2006 ));
+
+
+// 366
+     System.out.print( "   Counting 0366 days between 08-15-2007 and 08-15-2008 : " );
+     System.out.println( CalendarStuff.daysBetween(  8, 15, 2007,  8, 15, 2008 ));
+
+
+// 364
+     System.out.print( "   Counting 0364 days between 08-15-2001 and 08-14-2002 : " );
+     System.out.println( CalendarStuff.daysBetween(  8, 15, 2001,  8, 14, 2002 ));
+
+
+// 508
+     System.out.print( "   Counting 0508 days between 03-15-2006 and 08-05-2007 : " );
+     System.out.println( CalendarStuff.daysBetween(  3, 15, 2006,  8,  5, 2007 ));
+
+
+// 1239
+     System.out.print( "   Counting 1239 days between 03-15-2005 and 08-05-2008 : " );
+     System.out.println( CalendarStuff.daysBetween(  3, 15, 2005,  8,  5, 2008 ));
+
+
+// 1060
+     System.out.print( "   Counting 1060 days between 11-15-2005 and 10-10-2008 : " );
+     System.out.println( CalendarStuff.daysBetween( 11, 15, 2005, 10, 10, 2008 ));
+
+
+// 8638
+     System.out.print( "   Counting 8638 days between 11-15-2001 and 07-10-2025 : " );
+     System.out.println( CalendarStuff.daysBetween( 11, 15, 2001,  7, 10, 2025 ));
+
+
+// 1
+     System.out.print( "   Counting 0001 day  between 03-16-2005 and 03-15-2005 : " );
+     System.out.println( CalendarStuff.daysBetween(  3, 16, 2005,  3, 15, 2005 ));
+   }
+
+
    static void test_isLeapYear(){
 
       System.out.println( "\nELEVEN TESTS FOR isLeapYear():" );
