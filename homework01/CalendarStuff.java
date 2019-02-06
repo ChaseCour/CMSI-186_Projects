@@ -194,7 +194,7 @@ public class CalendarStuff {
 
    */
 
-   public static int compareDate( int month1, int day1, int year1, int month2, int day2, int year2 ) {
+   public static int compareDate( long month1, long day1, long year1, long month2, long day2, long year2 ) {
      if (year1 < year2){
        return -1;
      }
@@ -358,13 +358,13 @@ public class CalendarStuff {
 
    */
 
-   public static long daysBetween( int month1, int day1, int year1, int month2, int day2, int year2 ) {
-     int compareDate = compareDate(month1, day1, year1, month2, day2, year2);
+   public static long daysBetween( long month1, long day1, long year1, long month2, long day2, long year2 ) {
+     long compareDate = compareDate(month1, day1, year1, month2, day2, year2);
      if (compareDate == 0){
        return 0;
      }
-     if (compareDate == 1){
-       int sub = year1;
+     if (compareDate == 1L){
+       long sub = year1;
        year1 = year2;
        year2 = sub;
        sub = month1;
@@ -374,40 +374,40 @@ public class CalendarStuff {
        day1 = day2;
        day2 = sub;
      }
-     int datesApart = 0;
-     int yearsApart = year2 - year1;
+     long datesApart = 0;
+     long yearsApart = year2 - year1;
      if (yearsApart > 1){
-       int[] yearArray = new int[yearsApart];
+       long[] yearArray = new long[(int)yearsApart];
        for ( int i = 1; i < yearsApart ; i++ ){
          yearArray[i] = year1 + i;
        }
-       for (int i = 0; i < yearsApart -1 ; i++ ){
-         if(isLeapYear(yearArray[i])){
+       for (int i = 0; i < (int)yearsApart - 1 ; i++ ){
+         if(isLeapYear(yearArray[(int)i])){
            datesApart++;
          }
-         datesApart +=  365;
+         datesApart +=  365L;
        }
-       for (int i = month1; i < 12; i++ ){
+       for (int i = (int)month1; i < 12L; i++ ){
          datesApart += days[i];
          if (i == 1 && isLeapYear(year1)){
            datesApart++;
          }
        }
-       for (int i = 0; i < month2 - 1; i++ ){
+       for (int i = 0; i < month2 - 1L; i++ ){
          datesApart += days[i];
          if (i == 1 && isLeapYear(year1)){
            datesApart++;
          }
        }
-       datesApart += days[month1 - 1] - day1;
+       datesApart += days[(int)month1 - 1] - day1;
        if (month1 == 2 && isLeapYear(year1)){
          datesApart++;
      }
      datesApart += day2;   }
-      int monthDif = month2 - month1;
+      long monthDif = month2 - month1;
      if (yearsApart < 2 && month1 >= month2){
-         for (int i = 0; i < 12 - month1; i++){
-           datesApart += days[i + month1];
+         for (long i = 0; i < 12 - month1; i++){
+           datesApart += days[(int)i + (int)month1];
            if (month1 + i == 2 && isLeapYear(year1)){
              datesApart++;
            }
@@ -418,14 +418,14 @@ public class CalendarStuff {
                datesApart++;
              }
          }
-         datesApart += days[month1 - 1] - day1;
+         datesApart += days[(int)month1 - 1] - day1;
          if (month1 == 2 && isLeapYear(year2)){
            datesApart++;
        }
         datesApart += day2;
      }
      if (yearsApart == 0 && month1 < month2){
-       datesApart += days[month1 -1] - day1;
+       datesApart += days[(int)month1 -1] - day1;
        datesApart += day2;
      }
      if (monthDif == 0 && yearsApart == 0){
@@ -433,18 +433,18 @@ public class CalendarStuff {
      }
      if (yearsApart ==1 && month1 < month2){
        for (int i = 0; i < 12 - month1; i++){
-         datesApart += days[i + month1];
+         datesApart += days[i + (int)month1];
          if (month1 + i == 2 && isLeapYear(year1)){
            datesApart++;
          }
        }
-         for (int i = 0; i < month2 - 1; i++){
-           datesApart += days[i];
+         for (long i = 0; i < month2 - 1; i++){
+           datesApart += days[(int)i];
            if (i == 2 && isLeapYear(year2)){
              datesApart++;
            }
        }
-       datesApart += days[month1 - 1] - day1;
+       datesApart += days[(int)month1 - 1] - day1;
        if (month1 == 2 && isLeapYear(year2)){
          datesApart++;
      }
