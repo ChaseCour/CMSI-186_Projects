@@ -242,7 +242,7 @@ public class CalendarStuff {
 
    */
 
-   public static boolean isValidDate( int month, long day, long year ) {
+   public static boolean isValidDate( int month, int day, int year ) {
      if (isLeapYear(year)){
        if(month == 2){
          if(day == 29){
@@ -251,7 +251,7 @@ public class CalendarStuff {
        }
      }
      if (month < 13 && month > 0){
-       if (days[month] >= day && day >= 1){
+       if (days[month - 1] >= day && day >= 1){
          if (year > 0) {
            return true;
          }
@@ -298,10 +298,7 @@ public class CalendarStuff {
      return "November";
      if(month == 12)
      return "December";
-     if(month == 0)
-     return "Zeroary";
-     if(month == 13)
-     return "Thirtember";
+
 
      return "Invalid Month";
    }
@@ -334,10 +331,7 @@ public class CalendarStuff {
      return "Friday";
      if(day == 7)
      return "Saturday";
-     if(day == 0)
-     return "Zeroday";
-     if(day == 8)
-     return "Octoday";
+
 
      return "Invalid Day";
    }
