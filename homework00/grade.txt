@@ -1,0 +1,17 @@
+Hi Chase,
+
+Here is the evaluation of your Homework #0, the Stuff to Get You Started exercise.
+
+10 / 10 points: GitHub account exists
+5 / 5 points: Repository is private
+5 / 5 points: I have been added as a contributor
+5 / 5 points: CMSI-186_Projects is either a project or folder created
+5 / 5 points: CMSI-186_Projects is named correctly
+5 / 5 points: Sub-directory of homework00 is created and named correctly
+5 / 5 points: Hello.java is created
+10 / 10 points: Hello.java compiles with no errors
+10 / 10 points: Hello.java prints some variation of "Hello, World!"
+
+TOTAL: 60 / 60 points
+
+Perfect example, good job!
