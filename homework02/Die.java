@@ -1,4 +1,4 @@
-public class DieEmpty {
+public class Die {
 
 
 
@@ -30,8 +30,14 @@ public class DieEmpty {
 
    */
 
-   public DieEmpty( int nSides ) {
-
+   public Die( int nSides ) {
+     if (nSides >= MINIMUM_SIDES){
+       this.sides = nSides;
+     int[] sides = new int[nSides];
+       for (int i = 0; i < nSides; i++){
+         sides[i] = i + 1;
+       }
+     }
    }
 
 
@@ -45,8 +51,8 @@ public class DieEmpty {
    */
 
    public int roll() {
-
-      return 0;
+     int roll = (int)(Math.random() * this.sides);
+      return roll;
 
    }
 

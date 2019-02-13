@@ -32,10 +32,12 @@ public class DiceSet {
 
    */
 
-   public DiceSetEmpty( int count, int sides ) {
+   public DiceSet( int count, int sides ) {
 
-      ds = new Die[ count ];
+      ds = new Die[count];
+      for (int i = 0; i < count; i++){
 
+      }
    }
 
 
@@ -158,7 +160,7 @@ public class DiceSet {
 
    public static void main( String[] args ) {
 
-      // You do this part!
+            System.out.println( "Hello world from the DieSet class..." );
 
    }
 
