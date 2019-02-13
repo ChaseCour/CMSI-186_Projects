@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 
 
-public class DieAndDiceSetTestHarness {
+public class DieAndDiceSetTester {
 
 
 

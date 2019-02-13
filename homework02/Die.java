@@ -79,6 +79,13 @@ public class Die {
    }
 
 
+   public int getSides() {
+
+      return 0;
+
+   }
+
+
 
   /**
 
