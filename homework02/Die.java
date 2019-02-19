@@ -12,6 +12,8 @@ public class Die {
 
    private int pips;
 
+   private int sideUp;
+
    private final int MINIMUM_SIDES = 4;
 
 
@@ -38,6 +40,7 @@ public class Die {
          sides[i] = i + 1;
        }
      }
+     this.sideUp = this.roll();
    }
 
 
@@ -51,7 +54,8 @@ public class Die {
    */
 
    public int roll() {
-     int roll = (int)(Math.random() * this.sides);
+     int roll = 1 + (int)(Math.random() * this.sides);
+     sideUp = roll;
       return roll;
 
    }
@@ -74,14 +78,14 @@ public class Die {
 
    public int getValue() {
 
-      return 0;
+      return this.sideUp;
 
    }
 
 
    public int getSides() {
 
-      return 0;
+      return this.sides;
 
    }
 
@@ -112,8 +116,8 @@ public class Die {
    */
 
    public String toString() {
-
-      return "";
+     String s1 = Integer.toString(sideUp);
+      return s1;
 
    }
 
@@ -128,8 +132,8 @@ public class Die {
    */
 
    public static String toString( Die d ) {
-
-      return "";
+     String s1 = d.toString();
+      return s1;
 
    }
 

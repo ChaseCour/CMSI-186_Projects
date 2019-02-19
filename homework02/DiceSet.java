@@ -33,10 +33,12 @@ public class DiceSet {
    */
 
    public DiceSet( int count, int sides ) {
-
+     this.count = count;
+     this.sides = sides;
       ds = new Die[count];
       for (int i = 0; i < count; i++){
-
+        Die temp = new Die(sides);
+        ds[i] = temp;
       }
    }
 
@@ -49,8 +51,11 @@ public class DiceSet {
    */
 
    public int sum() {
-
-      return 0;
+    int total = 0;
+     for (int i = 0; i < count; i++){
+       total += ds[i].getValue();
+     }
+      return total;
 
    }
 
@@ -67,7 +72,9 @@ public class DiceSet {
    */
 
    public void roll() {
-
+     for (int i = 0; i < count; i++){
+       ds[i].roll();
+     }
    }
 
 
@@ -85,8 +92,7 @@ public class DiceSet {
    */
 
    public int rollIndividual( int dieIndex ) {
-
-      return 0;
+      return ds[dieIndex].roll();
 
    }
 
@@ -104,7 +110,7 @@ public class DiceSet {
 
    public int getIndividual( int dieIndex ) {
 
-      return -999;
+      return ds[dieIndex].getValue();
 
    }
 
@@ -117,10 +123,20 @@ public class DiceSet {
    */
 
    public String toString() {
+     String[] listy = new String[count];
+     String listV = "";
+     for (int i = 0; i < count; i++){
+       listy[i] = ds[i].toString();
+       listV += listy[i];
+       if (i + 1 != count){
+         listV += ", ";
+       }
+     }
+      String dieCount = "There are " + count + " dice in the set.";
+      String sideCount = "There are " + sides + " sides on each.";
+      String valueList = "The list count goes:";
 
-      String result = "";
-
-      return result;
+      return dieCount + sideCount + valueList + listV;
 
    }
 
@@ -134,7 +150,7 @@ public class DiceSet {
 
    public static String toString( DiceSet ds ) {
 
-      return "";
+      return ds.toString();
 
    }
 
@@ -147,9 +163,19 @@ public class DiceSet {
    */
 
    public boolean isIdentical( DiceSet ds ) {
-
+     int tester = 0;
+     if (count != ds.ds.length){
+       return false;
+     }
+     for (int i = 0; i < count; i++){
+       if (this.ds[i].getValue() == ds.ds[i].getValue()){
+         tester++;
+       }
+     }
+     if (tester == count){
       return true;
-
+    }
+return false;
    }
 
   /**
