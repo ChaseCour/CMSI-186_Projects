@@ -132,8 +132,8 @@ public class DiceSet {
          listV += ", ";
        }
      }
-      String dieCount = "There are " + count + " dice in the set.";
-      String sideCount = "There are " + sides + " sides on each.";
+      String dieCount = "There are " + count + " dice in the set. ";
+      String sideCount = "There are " + sides + " sides on each. ";
       String valueList = "The list count goes:";
 
       return dieCount + sideCount + valueList + listV;
