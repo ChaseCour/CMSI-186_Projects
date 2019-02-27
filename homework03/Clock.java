@@ -7,13 +7,23 @@ public class Clock {
    private static final double MAXIMUM_DEGREE_VALUE = 360.0;
    private static final double HOUR_HAND_DEGREES_PER_SECOND = 0.00834;
    private static final double MINUTE_HAND_DEGREES_PER_SECOND = 0.1;
-
+   public static boolean running = true;
   /**
    *  Constructor goes here
    */
-   public ClockEmpty() {
-
-   }
+   public Clock() {
+     double bigHand = 0.0;
+     double littleHand = 0.0;
+     double secondHand = 0.0;
+//     while (running){
+       if (bigHand > MAXIMUM_DEGREE_VALUE){
+         bigHand -= MAXIMUM_DEGREE_VALUE;
+         littleHand -= MAXIMUM_DEGREE_VALUE;
+       }
+       bigHand += HOUR_HAND_DEGREES_PER_SECOND;
+       littleHand += MINUTE_HAND_DEGREES_PER_SECOND;
+     }
+//   }
 
 
   /**
@@ -66,7 +76,7 @@ public class Clock {
    *  @return double-precision value of the minute hand location
    */
    public double getMinuteHandAngle() {
-      return 0.0;
+      return 1;
    }
 
 
@@ -75,7 +85,7 @@ public class Clock {
    *  @return double-precision value of the angle between the two hands
    */
    public double getHandAngle() {
-      return 0.0;
+      return Math.abs(1 -2);
    }
 
 
@@ -109,7 +119,7 @@ public class Clock {
       System.out.println( "\nCLOCK CLASS TESTER PROGRAM\n" +
                           "--------------------------\n" );
       System.out.println( "  Creating a new clock: " );
-      ClockEmpty clock = new ClockEmpty();
+      Clock clock = new Clock();
       System.out.println( "    New clock created: " + clock.toString() );
       System.out.println( "    Testing validateAngleArg()....");
       System.out.print( "      sending '  0 degrees', expecting double value   0.0" );

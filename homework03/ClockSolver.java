@@ -12,7 +12,7 @@ public class ClockSolver {
    *  Constructor
    *  This just calls the superclass constructor, which is "Object"
    */
-   public ClockSolverEmpty() {
+   public ClockSolver() {
       super();
     }
 
@@ -47,8 +47,8 @@ public class ClockSolver {
    *                args[1] is the time slice; this is optional and defaults to 60 seconds
    */
    public static void main( String args[] ) {
-      ClockSolverEmpty cse = new ClockSolverEmpty();
-      ClockEmpty clock    = new ClockEmpty();
+      ClockSolver cse = new ClockSolver();
+      Clock clock    = new Clock();
       double[] timeValues = new double[3];
       cse.handleInitialArguments( args );
       while( true ) {
