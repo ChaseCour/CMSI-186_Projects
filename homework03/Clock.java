@@ -7,24 +7,33 @@ public class Clock {
    private static final double MAXIMUM_DEGREE_VALUE = 360.0;
    private static final double HOUR_HAND_DEGREES_PER_SECOND = 0.00834;
    private static final double MINUTE_HAND_DEGREES_PER_SECOND = 0.1;
-   public static boolean running = true;
+   private static boolean running = true;
   /**
    *  Constructor goes here
    */
-   public Clock() {
-     double bigHand = 0.0;
-     double littleHand = 0.0;
-     double secondHand = 0.0;
-//     while (running){
-       if (bigHand > MAXIMUM_DEGREE_VALUE){
-         bigHand -= MAXIMUM_DEGREE_VALUE;
-         littleHand -= MAXIMUM_DEGREE_VALUE;
-       }
-       bigHand += HOUR_HAND_DEGREES_PER_SECOND;
-       littleHand += MINUTE_HAND_DEGREES_PER_SECOND;
-     }
-//   }
+        private static double timeInc;
+        double movement = DEFAULT_TIME_SLICE_IN_SECONDS;
 
+   //     if (args[1]  double){
+   //       timeInc = args[1];
+   //     }
+   //     else{
+   //       timeInc = 60.0;
+   //     }
+        double bigHand = 0.0;
+        double littleHand = 0.0;
+   public Clock() {
+     double angle;
+     }
+
+     public static void declareTime( String args[] ) {
+        if( 2 == args.length ) {
+           timeInc = validateTimeSliceArg(args[1]);
+        }
+        else{
+          timeInc = 60.0;
+        };
+  }
 
   /**
    *  Methods go here
@@ -33,7 +42,13 @@ public class Clock {
    *  @return double-precision value of the current clock tick
    */
    public double tick() {
-      return 0.0;
+     bigHand += timeInc;
+     littleHand += timeInc;
+     littleHand = littleHand % 3600.0;
+     if(bigHand > 43200.0){
+       running = false;
+     }
+      return timeInc;
    }
 
 
@@ -44,9 +59,13 @@ public class Clock {
    *  @throws  NumberFormatException
    */
    public static double validateAngleArg( String argValue ) throws NumberFormatException {
-      return 0.0;
+     double angle = Double.parseDouble(argValue);
+      return angle;
    }
 
+   public static boolean checkRunning( ){
+      return running;
+   }
 
   /**
    *  Method to validate the optional time slice argument
@@ -60,23 +79,25 @@ public class Clock {
    *         to take a VERY LONG TIME to complete!
    */
    public static double validateTimeSliceArg( String argValue ) {
-      return 0.0;
+     double timeSlice = Double.parseDouble(argValue);
+      return timeSlice;
    }
 
 
   /**
    *  Method to calculate and return the current position of the hour hand
    *  @return double-precision value of the hour hand location
-   *
+   */
+
    public double getHourHandAngle() {
-      return 0.0;
+      return bigHand * HOUR_HAND_DEGREES_PER_SECOND;
    }
   /**
    *  Method to calculate and return the current position of the minute hand
    *  @return double-precision value of the minute hand location
    */
    public double getMinuteHandAngle() {
-      return 1;
+      return littleHand * MINUTE_HAND_DEGREES_PER_SECOND;
    }
 
 
@@ -85,7 +106,7 @@ public class Clock {
    *  @return double-precision value of the angle between the two hands
    */
    public double getHandAngle() {
-      return Math.abs(1 -2);
+       return getMinuteHandAngle() - getHourHandAngle();
    }
 
 
@@ -95,7 +116,7 @@ public class Clock {
    *  @return double-precision value the total seconds private variable
    */
    public double getTotalSeconds() {
-    return 0.0;
+    return bigHand;
    }
 
 
@@ -104,7 +125,7 @@ public class Clock {
    *  @return String value of the current clock
    */
    public String toString() {
-      return "Clock string, dangit!";
+      return "MinuteHand angle is: " + getMinuteHandAngle() + "  HourHand angle is: " + getHourHandAngle() + "    MinuteHand time is: " + littleHand + "   HourHand time is: " + bigHand;
    }
 
 
