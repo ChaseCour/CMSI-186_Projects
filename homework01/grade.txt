@@ -1,0 +1,19 @@
+Hi Chase,
+
+Here is the evaluation of your Homework #1, the Calendar Stuff exercise.
+
+For each of the methods (worth 10 points each), 5 points go towards a decent attempt and the final 5 points go towards a correct implementation.
+
+10 / 10 points: Submitted an attempt at the assignment to GitHub
+10 / 10 points: class CalendarStuff exists and compiles no errors
+10 / 10 points: CalendarStuff.isLeapYear() works for all tests 
+10 / 10 points: CalendarStuff.daysInMonth() works for all tests
+10 / 10 points: CalendarStuff.isValidDate() works for all tests
+10 / 10 points: CalendarStuff.daysBetween() works for all tests
+10 / 10 points: CountTheDays program exists and compiles no errors
+1 / 5 bonus points: Coding Style, indentation, variable names, comments, etc.
+
+TOTAL: 70 / 70 points 
+
+NOTES:
+Awesome job! You received 71 points but there is a max of 100% on this assignment. For future reference, in order to get the other bonus points you would have to clean up your indentation and add comments.
