@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class ClockSolver {
 
   /**
-   *  Class field definintions go here
+   Added a not needed varible
    */
    private final double MAX_TIME_SLICE_IN_SECONDS  = 1800.00;
    private final double DEFAULT_TIME_SLICE_SECONDS = 60.0;
@@ -12,8 +12,7 @@ public class ClockSolver {
    public static boolean running = true;
 
   /**
-   *  Constructor
-   *  This just calls the superclass constructor, which is "Object"
+   Didn't touch
    */
    public ClockSolver() {
       super();
@@ -21,8 +20,7 @@ public class ClockSolver {
 
 
   /**
-   *  Method to handle all the input arguments from the command line
-   *   this sets up the variables for the simulation
+   Didn't touch
    */
    public void handleInitialArguments( String args[] ) {
      // args[0] specifies the angle for which you are looking
@@ -42,12 +40,10 @@ public class ClockSolver {
 
 
   /**
-   *  The main program starts here
-   *  remember the constraints from the project description
-   *  @see  http://bjohnson.lmu.build/cmsi186web/homework04.html
-   *  @param  args  String array of the arguments from the command line
-   *                args[0] is the angle for which we are looking
-   *                args[1] is the time slice; this is optional and defaults to 60 seconds
+   This makes a clock and uses a while loop to tick it until it is done. Every
+   tick the angle is checked and added to an array list if it is the right
+   angle. Then uses a for loop to print the array list and list each time that
+   it hits the angle.
    */
    public static void main( String args[] ) {
       ClockSolver cse = new ClockSolver();

@@ -9,17 +9,13 @@ public class Clock {
    private static final double MINUTE_HAND_DEGREES_PER_SECOND = 0.1;
    private static boolean running = true;
   /**
-   *  Constructor goes here
+   *  I declared timeInc and running to check that the clock was still in
+   bounds of where it should be. TimeInc is what I use to tic and decide
+   how far to move. The declareTime class is to set the time sclice to what it
+   needs to be.
    */
         private static double timeInc;
         double movement = DEFAULT_TIME_SLICE_IN_SECONDS;
-
-   //     if (args[1]  double){
-   //       timeInc = args[1];
-   //     }
-   //     else{
-   //       timeInc = 60.0;
-   //     }
         double bigHand = 0.0;
         double littleHand = 0.0;
    public Clock() {
@@ -36,10 +32,10 @@ public class Clock {
   }
 
   /**
-   *  Methods go here
-   *
-   *  Method to calculate the next tick from the time increment
-   *  @return double-precision value of the current clock tick
+   Tick is meant to change the big and little hands to what they need to be at.
+   It also changes running if the hour hand begins to go past 12 on the clock.
+   LittleHand is the second hand and the hour hand is bigHand. Little hand
+   resets every hour.
    */
    public double tick() {
      bigHand += timeInc;
@@ -53,48 +49,43 @@ public class Clock {
 
 
   /**
-   *  Method to validate the angle argument
-   *  @param   argValue  String from the main programs args[0] input
-   *  @return  double-precision value of the argument
-   *  @throws  NumberFormatException
+   Just validates and gives the double not the string
    */
    public static double validateAngleArg( String argValue ) throws NumberFormatException {
      double angle = Double.parseDouble(argValue);
       return angle;
    }
 
+   /**
+    Used to check if the clock is still in range because running is false if
+    the time is too high.
+    */
+
    public static boolean checkRunning( ){
       return running;
    }
 
   /**
-   *  Method to validate the optional time slice argument
-   *  @param  argValue  String from the main programs args[1] input
-   *  @return double-precision value of the argument or -1.0 if invalid
-   *  note: if the main program determines there IS no optional argument supplied,
-   *         I have elected to have it substitute the string "60.0" and call this
-   *         method anyhow.  That makes the main program code more uniform, but
-   *         this is a DESIGN DECISION, not a requirement!
-   *  note: remember that the time slice, if it is small will cause the simulation
-   *         to take a VERY LONG TIME to complete!
+   Checks to make sure that the time slice is legal and in range
    */
    public static double validateTimeSliceArg( String argValue ) {
-     double timeSlice = Double.parseDouble(argValue);
-      return timeSlice;
+      double timeSlice = Double.parseDouble(argValue);
+      if (timeSlice < 180.1){
+        return timeSlice;
+      }
+      return 60.0;
    }
 
 
   /**
-   *  Method to calculate and return the current position of the hour hand
-   *  @return double-precision value of the hour hand location
+   bigHand is the sconds and the value given is degrees per second.
    */
 
    public double getHourHandAngle() {
       return bigHand * HOUR_HAND_DEGREES_PER_SECOND;
    }
   /**
-   *  Method to calculate and return the current position of the minute hand
-   *  @return double-precision value of the minute hand location
+   What second mark it is at times the degree per second.
    */
    public double getMinuteHandAngle() {
       return littleHand * MINUTE_HAND_DEGREES_PER_SECOND;
@@ -102,8 +93,7 @@ public class Clock {
 
 
   /**
-   *  Method to calculate and return the angle between the hands
-   *  @return double-precision value of the angle between the two hands
+   Hour minus minute to get angle
    */
    public double getHandAngle() {
        return getMinuteHandAngle() - getHourHandAngle();
@@ -111,9 +101,7 @@ public class Clock {
 
 
   /**
-   *  Method to fetch the total number of seconds
-   *   we can use this to tell when 12 hours have elapsed
-   *  @return double-precision value the total seconds private variable
+   bigHand never resets so it is the full second count.
    */
    public double getTotalSeconds() {
     return bigHand;
@@ -121,8 +109,7 @@ public class Clock {
 
 
   /**
-   *  Method to return a String representation of this clock
-   *  @return String value of the current clock
+   String giving the angle and second count of each
    */
    public String toString() {
       return "MinuteHand angle is: " + getMinuteHandAngle() + "  HourHand angle is: " + getHourHandAngle() + "    MinuteHand time is: " + littleHand + "   HourHand time is: " + bigHand;
@@ -130,11 +117,7 @@ public class Clock {
 
 
   /**
-   *  The main program starts here
-   *  remember the constraints from the project description
-   *  @see  http://bjohnson.lmu.build/cmsi186web/homework04.html
-   *  be sure to make LOTS of tests!!
-   *  remember you are trying to BREAK your code, not just prove it works!
+   Not really needed
    */
    public static void main( String args[] ) {
       System.out.println( "\nCLOCK CLASS TESTER PROGRAM\n" +
