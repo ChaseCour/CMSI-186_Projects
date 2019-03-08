@@ -52,16 +52,25 @@ public class ClockSolver {
    public static void main( String args[] ) {
       ClockSolver cse = new ClockSolver();
       Clock clock    = new Clock();
+      int many = 0;
       clock.declareTime(args);
       ArrayList<Double> times = new ArrayList<>();
       cse.handleInitialArguments( args );
       while( clock.checkRunning() ) {
         if(Math.abs(clock.validateAngleArg(args[0])- clock.getHandAngle()) < EPSILON_VALUE){
           times.add(clock.getTotalSeconds());
+          many++;
         }
          clock.tick();
       }
       System.out.println("The clock hit the angle " + times.size() + " times!");
+      for(int i = 0; i < many; i++){
+        if ((int)((times.get(i) % 3600) / 60) < 10){
+          System.out.println((int)(times.get(i) / 3600) + ":0" + (int)((times.get(i) % 3600) / 60));
+        }
+        else{
+      System.out.println((int)(times.get(i) / 3600) + ":" + (int)((times.get(i) % 3600) / 60));
+    }}
       System.exit( 0 );
    }
 }
