@@ -15,22 +15,17 @@ public class Clock {
    needs to be.
    */
         private static double timeInc;
-        double movement = DEFAULT_TIME_SLICE_IN_SECONDS;
-        double bigHand = 0.0;
-        double littleHand = 0.0;
+        static double movement = DEFAULT_TIME_SLICE_IN_SECONDS;
+        static double bigHand = 0.0;
+        static double littleHand = 0.0;
 
 
    public Clock() {
      double angle;
      }
 
-     public static void declareTime( String args[] ) {
-        if( 2 == args.length ) {
-           timeInc = validateTimeSliceArg(args[1]);
-        }
-        else{
-          timeInc = 1.00;
-        };
+     public static void declareTime( String args ) {
+           timeInc = validateTimeSliceArg(args);
   }
 
   /**
@@ -39,14 +34,8 @@ public class Clock {
    LittleHand is the second hand and the hour hand is bigHand. Little hand
    resets every hour.
    */
-   public double tick() {
+   public static void tick() {
      bigHand += timeInc;
-     littleHand += timeInc;
-     littleHand = littleHand % 3600.0;
-     if(bigHand > 43200.0){
-       running = false;
-     }
-      return timeInc;
    }
 
   /**
@@ -57,13 +46,13 @@ public class Clock {
       if (timeSlice < 180.1){
         return timeSlice;
       }
-      return 60.0;
+      return 1.00;
    }
 
   /**
    bigHand never resets so it is the full second count.
    */
-   public double getTotalSeconds() {
+   public static double getTotalSeconds() {
     return bigHand;
    }
 
