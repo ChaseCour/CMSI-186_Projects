@@ -45,6 +45,7 @@ public class SoccerSim{
       for (int i = 0; i < set.length; i++){
         set[i].changeSpot(set[i]);
       }
+     System.out.println();
     }
    }
 
