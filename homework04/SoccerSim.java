@@ -67,7 +67,7 @@ public static boolean checkRunningStop(Ball[] ballsS){
 //prints out each collision based on the input array of balls
  public static void getCollision(Ball[] s){
    System.out.println("Ball " + s[0].getName(s[0]) + " hit ball "  + s[1].getName(s[1])
-   + " at postion (" + s[0].getPosX(s[0]) + "," + s[0].getPosY(s[0]) + ") while moving at vector <" + s[0].getMoveX(s[0]) + "," + s[0].getMoveY(s[0])
+   + " at postion (" + (int)s[0].getPosX(s[0]) + "," + (int)s[0].getPosY(s[0]) + ") while moving at vector <" + s[0].getMoveX(s[0]) + "," + s[0].getMoveY(s[0])
     + "> at " + Clock.getTotalSeconds() + " seconds");
  }
 
