@@ -48,6 +48,7 @@ public class Ball{
      System.out.println("X pos = " + b.posX);
      System.out.println("Y velocity = " + b.moveY);
      System.out.println("X velocity = " + b.moveX);
+     System.out.println();
     b.posY += b.moveY;
     b.posX += b.moveX;
     b.moveX = b.moveX * friction;
