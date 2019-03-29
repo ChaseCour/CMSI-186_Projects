@@ -43,6 +43,11 @@ public class Ball{
 
 //method to change the spot and velocity of each ball by 1% of its current speed
   public void changeSpot (Ball b){
+     System.out.println(b.name);
+    System.out.println("Y pos = " + b.posY);
+     System.out.println("X pos = " + b.posX);
+     System.out.println("Y velocity = " + b.movY);
+     System.out.println("X velocity = " + b.movX);
     b.posY += b.moveY;
     b.posX += b.moveX;
     b.moveX = b.moveX * friction;
