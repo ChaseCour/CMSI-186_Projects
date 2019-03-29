@@ -71,7 +71,7 @@ public static boolean checkRunningStop(Ball[] ballsS){
     + "> at " + Clock.getTotalSeconds() + " seconds");
  }
 
-//method to see if the ball collided
+//method to see if the ball collided and return the speeds and positions of the balls. Prints two lines to show where each ball was and the speed
    public static boolean checkRunningHit(Ball[] ballsR){
 
      if (ballsR[1].didItHit(ballsR) != 0){
