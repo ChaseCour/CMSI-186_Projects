@@ -17,6 +17,11 @@ public class BrobIntTester{
     BrobInt three = one.add(two);
     printer = three.toString();
     System.out.println(printer);
+//    System.out.println(one.biggerThan(two));
+    BrobInt four = one.subtract(two);
+    printer = four.toString();
+    System.out.println(printer);
+    System.out.println(one.biggerThan(two));
     }
 
 }
