@@ -17,15 +17,6 @@ public class BrobInt{
   public static final BrobInt ONE = new BrobInt("1");
   public static final BrobInt ZERO = new BrobInt("0");
   public static final BrobInt TEN = new BrobInt("10");
-<<<<<<< HEAD
-=======
-
-  public static BrobInt valueOf( long value ){
-    c = String.valueOf(value);
-    BrobInt temp = new BrobInt(c);
-    return temp;
-  }
->>>>>>> 2db93ad52a2d17757c61170fbac7c5f4d0f2daf2
 
 //parses the long to a string and calls the other method
   public static BrobInt valueOf( long value ){
@@ -87,6 +78,7 @@ public class BrobInt{
 
 //uses divide code but passes out the last little BrobInt not the count
     public BrobInt remainder( BrobInt z ){
+      if(this.biggerThan(z)){
       BrobInt tempBrob = this;
       BrobInt tempBrober;
       int passed = z.getLength();
@@ -105,10 +97,36 @@ public class BrobInt{
 //        System.out.println(tempBrober.toString());
         tempBrober = tempBrober.zeroLessBrob();
         tempBrob = tempBrober;
-//        System.out.println(times.toString());
+  //      System.out.println(times.toString());
       }
       times.subtract(one);
       return tempBrob;
+    }
+    else{
+    BrobInt tempBrob = z;
+    BrobInt tempBrober;
+    int passed = this.getLength();
+    int had = z.getLength();
+    int i = passed;
+    int j = had;
+    tempString = "0";
+    BrobInt total;
+    BrobInt times = new BrobInt(tempString);
+    BrobInt one = new BrobInt("1");
+    while (tempBrob.biggerThan(this)){
+//        System.out.println(tempBrob.toString());
+//        System.out.println("we live");
+      times = times.add(one);
+      tempBrober = tempBrob.subtract(this);
+//        System.out.println(tempBrober.toString());
+      tempBrober = tempBrober.zeroLessBrob();
+      tempBrob = tempBrober;
+//        System.out.println(times.toString());
+    }
+    times.subtract(one);
+//    System.out.println(times.toString());
+    return tempBrob;
+  }
     }
 
 //Adds zeros for the multiply function
@@ -518,7 +536,8 @@ public class BrobInt{
 //gets each number multiplied by each one then adds the number of zeros behind
 // in order to get the real value
     public BrobInt multiply(BrobInt z){
-/**      BrobInt tempBrob = new BrobInt("1");
+      BrobInt tempBrob = new BrobInt("1");
+      BrobInt tempBrober;
       int quickSum;
       String toPass;
       int passed = z.getLength();
@@ -529,7 +548,7 @@ public class BrobInt{
       tempString = "0";
       BrobInt total;
       BrobInt sum = new BrobInt(tempString);
-      while (z.biggerThan(tempBrob)){
+      /** while (z.biggerThan(tempBrob)){
         sum = sum.add(this);
         tempBrob = tempBrob.add(ONE);
       }
@@ -548,7 +567,7 @@ public class BrobInt{
 //          System.out.println(sum.toString());
         }
       }
-      **/
+
       return sum;
     }
 
