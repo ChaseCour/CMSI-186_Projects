@@ -1,0 +1,82 @@
+Hi,
+
+Here is the evaluation of your Homework #5, the Riemann Sums exercise.
+
+The Riemann.java file must exist.  It must have a main method and needs
+to handle at a minimum the "runtests", the "poly", and the "sin" functions
+on the command line.  In addition there are argument validations that must
+be handled including:
+
+   - detecting no arguments
+   - detecting the correct number of arguments
+   - arguments are of correct type after conversion (no letters)
+   - percentage value set to default if not on command line
+   - percentage validated and set properly if it IS on the command line
+
+At minimum, there should be methods to handle the "poly" and the "sin"
+integration functions.  
+
+The "runMyTests" method must exist and must allow for the tests to be run
+using the command line "pseudo-function" called "runtests".  There must
+be AT LEAST one test.
+
+Testing will be done using the script files that were sent to you during
+the development of your project.  There are 6 tests for input validity.
+There are 5 tests for up to 2nd degree polynomials, and one test for a 5th order polynomial.  There are 5 tests for the sin function.
+
+There must be at least one file in the repo: the Riemann.java file.
+
+Your source code style is important for this project, and will continue
+to be so for the rest of the semester.  Make sure you indent properly
+and consistently, that your variables have good names, there is NO code
+that is left in that is not needed [commented out], and that you have
+comments to help explain what the code does without being overly
+loquacious.
+
+It is possible to get more than 100% on this assignment.  The total percent
+will be applied to the 15% that this exercise is worth overall.  For example,
+if you get the maximum credit, you will get 370 out of 300, which is 123.333%.
+This means you will get 18.5 points for this 15-point exercise.
+
+18 / 20 points: Riemann.java exists and compiles no errors
+5 / 10 points: Checks args and throws exceptions
+10 / 10 points: Main method runs with no errors
+0 / 30 points: runtests functionality exists and runs at least one test
+30 / 30 points: Code to handle polynomial function exists and a decent attempt was made
+30 / 30 points: Code to handle sin function exists and a decent attempt was made
+20 / 60 points: Tests valid inputs (6 tests/10 points each)
+30 / 50 points: Tests second degree polynomials (5 tests/10 points each)
+10 / 10 points: Tests fifth degree polynomial (1 test)
+20 / 50 points: Tests sin (5 tests/10 points each)
+
+
+BASE POINTS: 173 / 300
+
+
+Extra Credit:
+10 / 10 points: Cosine
+10 / 10 points: Tangent
+10 / 10 points: Log
+10 / 10 points: Exponent
+10 / 10 points: Square root
+0 / 10 points: Composite
+10 / 10 points: Code quality
+
+EXTRA CREDIT POINTS: 60 / 70
+
+
+TOTAL POINTS: 233 / 300
+
+
+NOTES:
+Minus a couple points because it's supposed to be Riemann not Reimann (therefore my tests
+didn't work and I had to change things).
+
+Well organized and well commented code! It wasn't necessary to split it out into two files
+but it made the code very clean and easy to read.
+
+You're not handling bad arguments. Also if there is a problem with the arguments you should throw an exception not just print an error (I didn't take off points for that part though).
+
+You didn't do runMyTests
+
+

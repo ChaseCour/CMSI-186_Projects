@@ -124,7 +124,8 @@ public class DynamicChangeMaker {
     previous low, it replaces it. If it hits the bottom and there is no change
     in the lowest score it means that it was impossible.
     **/
-    
+
+
    public  static void useOne(Tuple denom, int goal){
     maxTimes = goal / denom.getElement(0);
      for (int i = 0; i < maxTimes + 1; i++){

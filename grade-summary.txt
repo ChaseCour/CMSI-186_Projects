@@ -1,0 +1,15 @@
+This is your grade summary for the course.
+
+Homework 0 (5%): 60/60 -> 5 points
+Homework 1 (5%): 70/70 -> 5 points
+Homework 2 (5%): 284/300 -> 4.73 points
+Homework 3 (10%):
+Homework 4 (10%):
+Homework 5 (15%): 233/300 -> 11.65 points
+Homework 6 (15%):
+Homework 7 (15%):
+Homework 8 (10%): 100/100 -> 10 points
+Participation: (10%): 150/135 -> 11.11
+
+Running Points Total: 47.49
+

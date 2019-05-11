@@ -1,0 +1,65 @@
+This is your evaluation for Homework 2.
+
+
+=========================================
+
+General:
+10 / 10 : All three files are present
+8 / 10 : Test Harness passes all evaluation tests
+20 / 20 : HighRoll passes all evaluation tests
+
+Die Class
+20 / 20 : class Die exists and compiles
+8 / 10 : constructor works
+10 / 10 : roll() works
+10 / 10 : getValue()
+0 / 10 : setSides()
+10 / 10 : instan. toString()
+10 / 10 : class toString()
+
+DiceSet Class
+20 / 20 : class DiceSet exists and compiles
+8 / 10 : constructor works
+10 / 10 : sum() works
+10 / 10 : roll() works
+10 / 10 : rollIndividual() works
+10 / 10 : getIndividual() works
+10 / 10 : instan. toString()
+10 / 10 : class toString()
+5 / 10 : isIdentical() works
+
+HighRoll class
+10 / 10 : class HighRoll exists and compiles
+10 / 10 : TUI (Textual User Interface) works and all options are present
+10 / 10 : option 1 roll all works
+10 / 10 : option 2 roll one works
+10 / 10 : option 3 sum works
+10 / 10 : option 4 save works
+10 / 10 : option 5 display works
+10 / 10 : option 6 quit works
+
+Extra Credit:
+5 / 10 : Code quality
+
+TOTAL: 284 / 300 points
+
+NOTES:
+The HighRoll was confusing because you have to sets of instructions that use different
+letters for the options! 
+
+The Die class states that it is supposed to throw the IllegalArgumentException.
+
+The whole part in the constructor where you create int[] sides was unnecessary.
+
+The "sideUp" variable is what "pips" was supposed to be.
+
+You should use "this." in front of private variables (i.e. this.pips)
+
+setSides() wasn't filled out.
+
+DiceSet constructor is supposed to throw an IllegalArgumentException.
+
+isIdentical() doesn't quite work because the die in each set might not be in the same order.
+
+The indentation / comments etc. were a bit messy.
+
