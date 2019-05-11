@@ -17,6 +17,15 @@ public class BrobInt{
   public static final BrobInt ONE = new BrobInt("1");
   public static final BrobInt ZERO = new BrobInt("0");
   public static final BrobInt TEN = new BrobInt("10");
+<<<<<<< HEAD
+=======
+
+  public static BrobInt valueOf( long value ){
+    c = String.valueOf(value);
+    BrobInt temp = new BrobInt(c);
+    return temp;
+  }
+>>>>>>> 2db93ad52a2d17757c61170fbac7c5f4d0f2daf2
 
 //parses the long to a string and calls the other method
   public static BrobInt valueOf( long value ){
@@ -166,6 +175,7 @@ public class BrobInt{
 
 //used this before I had to set up a function to do the -1/0/1 thing
     public boolean biggerThan (BrobInt z){
+//      System.out.println("we live");
       int i = this.brob.length;
       if (this.getRealLength() > z.getRealLength()){
         return true;
