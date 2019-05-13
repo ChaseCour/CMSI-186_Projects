@@ -1,0 +1,49 @@
+This is your evaluation for Homework 4.
+
+=========================================
+
+
+General
+20 / 20: Ball and SoccerSim files exist
+
+Ball
+10 / 10: Ball class exists/compiles
+10 / 10: constructor exists and takes arguments
+0 / 10: Handles boundaries/checks if outOfBounds (can be part of SoccerSim)
+15 / 20: Keeps track of position
+15 / 20: Keeps track of speed
+8 / 10: Friction is applied
+
+Clock
+40 / 40: Clock functionality exists
+10 / 10: Clock uses accurate time slice
+
+SoccerSim
+10 / 10: SoccerSim class exists/compiles
+10 / 10: main/constructor exists and sets up the simulation
+10 / 20: Parses parameters correctly
+10 / 10: Validates arguments
+10 / 10: Creates and tests pole
+0 / 10: Creates initial report
+10 / 10: Creates report after every time slice
+10 / 10: Creates final report
+10 / 10: Collision detection
+
+Tests
+0 / 50: 5 Tests
+
+Extra Credit:
+10 / 10: Code quality
+
+
+TOTAL: 208 / 300 points
+
+Notes:
+The ball moves and its friction is applied every second, not every time slice.
+The time slice is just when we capture the new movement, but it moves multiple times
+within that slice (depending on how long the slice is).
+
+There's a few issues in here - not taking into account the default time slice, etc. 
+so the tests didn't work.
+
+
