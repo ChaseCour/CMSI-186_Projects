@@ -1,0 +1,37 @@
+Evaluation for Homework 3: ClockSolver
+
+For each test, you get credit if you find *at least*
+one occurrence of the angle and log its time.
+
+
+General
+20 / 20: Clock and ClockSolver files exist
+
+Clock
+10 / 10: Clock class exists and compiles
+20 / 20: main/constructor exist and work properly
+10 / 10: tick
+10 / 10: getHourHandAngle
+10 / 10: getMinuteHandAngle
+10 / 10: getHandAngle
+10 / 10: getTotalSeconds
+10 / 10: toString
+
+ClockSolver
+10 / 10: ClockSolver class exists and compiles
+20 / 20: main/constructor exist and work properly
+10 / 10: Parse arguments from command line
+5 / 10: Handles invalid input
+
+Tests
+70 / 90: 9 tests (10 points each)
+
+
+Extra Credit:
+10 / 10: Code quality
+
+
+TOTAL: 235 / 250 points
+
+NOTES:
+Good job!
