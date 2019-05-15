@@ -6,10 +6,18 @@ Homework 2 (5%): 284/300 -> 4.73 points
 Homework 3 (10%): 235/250 -> 9.4 points
 Homework 4 (10%): 208/300 -> 6.93 points
 Homework 5 (15%): 233/300 -> 11.65 points
-Homework 6 (15%):
-Homework 7 (15%):
+Homework 6 (15%): 70.5/90 -> 11.75 points
+Homework 7 (15%): 75.57/85 -> 13.34 points
 Homework 8 (10%): 100/100 -> 10 points
 Participation: (10%): 150/135 -> 11.11 points
 
-Running Points Total: 63.82 points
+Points Toal Before Homework 7: 75.57 points 
+
+Unfortunately your Homework 7 grade was not better than your lowest grade.
+Therefore, your other grades stay the way they are and your Homework 7
+grade is just an average of your other grades (75.57/85).
+
+Final Grade: 88.9 B+
+
+Good job!
 

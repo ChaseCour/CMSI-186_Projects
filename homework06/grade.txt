@@ -1,0 +1,54 @@
+Evaluation for Homework 6: BrobInt
+
+=======================================================
+
+BrobInt
+1 / 1: class file
+1 / 1: constructor exists
+0 / 1: validate method exists
+1 / 1: add method exists
+1 / 1: subtract method exists
+1 / 1: multiply method exists
+1 / 1: divide method exists
+1 / 1: remainder method exists
+8 / 8: your own tests (should be 1 test for each: add, subtract, mult, div; 2 points per test)
+
+SUBTOTAL: 15 / 16
+
+BrobInt Tester: 1 point per test
+10 / 10: constructor tests
+6 / 13: add tests
+2.5 / 7: subtract tests (half point for the right value but it should have been negative)
+14 / 14: mult tests
+4 / 4: div tests
+2 / 2: remainder tests
+3 / 3: compareTo tests
+
+SUBTOTAL: 41.5 / 53
+
+Collatz
+1 / 1: class file
+1 / 1: constructor
+0 / 1: input error handling
+1 / 7: tests
+
+SUBTOTAL: 3 / 10
+
+General
+4 / 4: BrobInt file exists and compiles
+2 / 2: Collatz file exists and compiles
+5 / 5: Comments and/or Javadocs
+
+SUBTOTAL: 11 / 11
+
+
+TOTAL POINTS: 70.5 / 90 points
+
+
+Notes:
+Awesome job!
+
+Some of your tests didn't work because they threw exceptions for some reason?
+
+
+

@@ -1,0 +1,21 @@
+Evaluation for Homework 07: Dynamic Programming Change Maker
+
+=======================================================
+
+20 / 20: DynamicChangeMaker class file exists
+10 / 10: DynamicChangeMaker compiles
+10 / 10: makeChangeWithDynamicProgramming exists
+30 / 30: Comments and/or JavaDocs
+0 / 30: Handle bad input
+10 / 220: DynamicChangeMaker tests pass (22 tests, 10 points each)
+
+Extra Credit:
+0 / 20: Allow it to run via the terminal
+20 / 20: Code quality
+
+TOTAL: 100 / 320 points
+
+Notes:
+The program wouldn't run the first time, I had to fix a few things
+(not returning the right value type, etc.). But even after that got
+fixed the tests couldn't run, they failed a few times and then got stuck.
